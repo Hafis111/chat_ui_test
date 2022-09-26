@@ -97,19 +97,35 @@ class _ChatDetailState extends State<ChatDetail> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Row(
-                  children: const [
+                  children: [
                     Flexible(
                       child: TextField(
-                        decoration:  InputDecoration(
+                        decoration: InputDecoration(
+                          
+                          // border: OutlineInputBorder(
+                            
+                          //      borderSide: BorderSide(color: Colors.black,width: 3),),
+                              enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.black)),
                           hintText: 'Write Message...',
-                          prefixIcon: CircleAvatar(
-                            radius: 23,
-                            child: Icon(
-                              Icons.add,
-                            ),
+                          prefixIcon: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 18,
+                                child: Icon(
+                                  Icons.add,
+                                ),
+                              ),
+                            ],
                           ),
-                          suffixIcon: CircleAvatar(
-                            child: Icon(Icons.send),
+                          suffixIcon: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 18,
+                                child: Icon(Icons.send),
+                              ),
+                            ],
                           ),
                           focusedBorder: InputBorder.none,
                         ),
